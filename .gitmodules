@@ -1,0 +1,3 @@
+[submodule "projects/jasmine-package"]
+	path = projects/jasmine-package
+	url = git@github.com:ValeriiVasin/jasmine-package.git
