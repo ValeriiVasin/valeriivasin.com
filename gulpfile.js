@@ -17,6 +17,11 @@ gulp.task('html', () => {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task('img', () => {
+  gulp.src('src/img/*.*')
+    .pipe(gulp.dest('public/img'));
+});
+
 gulp.task('css', () => {
   return gulp.src('src/css/*.css')
     .pipe(concat('app.min.css'))
@@ -35,4 +40,4 @@ gulp.task('dev', ['build'], () => {
   });
 });
 
-gulp.task('build', ['html', 'css']);
+gulp.task('build', ['html', 'css', 'img']);
