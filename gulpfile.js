@@ -1,5 +1,6 @@
 'use strict';
 
+var liveServer = require('live-server');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var fileinclude = require('gulp-file-include');
@@ -23,9 +24,15 @@ gulp.task('css', () => {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('watch', ['html', 'css'], () => {
+gulp.task('dev', ['build'], () => {
   gulp.watch('src/index.html', ['html']);
   gulp.watch('src/*.css', ['css']);
+
+  liveServer.start({
+    port: 8000,
+    root: './public',
+    noBrowser: true
+  });
 });
 
 gulp.task('build', ['html', 'css']);

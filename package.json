@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./node_modules/live-server/live-server public --port=8000 --no-browser"
+    "dev": "node ./node_modules/gulp/bin/gulp dev",
+    "build": "node ./node_modules/gulp/bin/gulp build"
   },
   "repository": {
     "type": "git",
