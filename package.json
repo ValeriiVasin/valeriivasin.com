@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./node_modules/gulp/bin/gulp build",
     "dev": "node ./node_modules/gulp/bin/gulp dev",
-    "build": "node ./node_modules/gulp/bin/gulp build"
+    "deploy": "cap production deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
