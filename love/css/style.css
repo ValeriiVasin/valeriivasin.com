@@ -1,9 +1,0 @@
-.timer{overflow: hidden; width: 700px; margin: 30px auto;}
-.timer .digit{float: left; width: 87px; height: 75px; background: url('../img/digits-second.png') top left no-repeat;}
-.timer .semicolon{float: left; width: 87px; height: 75px; background: url('../img/digits-second.png') left -750px no-repeat;}
-
-.message-1 {text-align: center; color: black; font: italic 24px/36px verdana, sans-serif;}
-.love-you{margin: 40px 0; text-align: center; font: italic 60px georgia, sans-serif; text-transform: uppercase; color: #f63e87; opacity: 0;}
-.message-2 {background: url('../img/love_you.png') center bottom no-repeat; text-align: center; color: black; font: italic 24px/36px verdana, sans-serif; padding-bottom: 180px;}
-
-#hmsite_banid{display: none;}
