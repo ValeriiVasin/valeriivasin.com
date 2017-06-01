@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./node_modules/gulp/bin/gulp build",
-    "dev": "node ./node_modules/gulp/bin/gulp dev",
-    "deploy": "cap production deploy",
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "deploy": "pm2 deploy production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,12 +16,15 @@
   "author": "Valerii Vasin",
   "license": "ISC",
   "homepage": "https://bitbucket.org/valeriivasin/valeriivasin.com#readme",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
     "gulp-htmlmin": "^1.2.0",
-    "gulp-minify-css": "^1.2.1",
-    "live-server": "^0.8.2"
+    "gulp-minify-css": "^1.2.1"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "pm2": "^2.4.6"
   }
 }
