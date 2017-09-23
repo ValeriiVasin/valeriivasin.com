@@ -11,7 +11,7 @@ module.exports = {
       host: 'valeriivasin.com',
       ref: 'origin/master',
       repo: 'git@bitbucket.org:valeriivasin/valeriivasin.com.git',
-      path: 'var/www/valeriivasin.com',
+      path: '/var/www/valeriivasin.com',
       'post-deploy': 'yarn && yarn run build && /etc/init.d/nginx restart',
       env: {
         NODE_ENV: 'production'
