@@ -8,7 +8,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'root',
-      host: 'valeriivasin.com',
+      host: '188.226.186.195',
       ref: 'origin/master',
       repo: 'git@bitbucket.org:valeriivasin/valeriivasin.com.git',
       path: '/var/www/valeriivasin.com',
