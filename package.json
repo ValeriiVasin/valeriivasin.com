@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server public/ --port=3000",
+    "start": "serve public",
     "build": "gulp build",
     "dev": "gulp dev",
     "deploy": "pm2 deploy production",
@@ -23,10 +23,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-file-include": "^0.13.7",
     "gulp-htmlmin": "^1.2.0",
-    "gulp-minify-css": "^1.2.1"
+    "gulp-minify-css": "^1.2.1",
+    "serve": "^6.2.0"
   },
   "devDependencies": {
-    "live-server": "^0.8.2",
     "pm2": "^2.4.6"
   }
 }
