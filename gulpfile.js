@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var fileinclude = require('gulp-file-include');
-var minifyCss = require('gulp-minify-css');
-var concat = require('gulp-concat');
+const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const fileinclude = require('gulp-file-include');
+const minifyCss = require('gulp-minify-css');
+const concat = require('gulp-concat');
 
 const gulpAmpValidator = require('gulp-amphtml-validator');
 
@@ -19,7 +19,7 @@ const img = () => gulp.src('src/img/*.*').pipe(gulp.dest('public/img'));
 
 const templates = () =>
   gulp
-    .src('src/index*.html')
+    .src('src/index.html')
     .pipe(
       fileinclude({
         prefix: '@@',
@@ -37,8 +37,7 @@ const ampValidate = () =>
     .pipe(gulpAmpValidator.failAfterError());
 
 const watch = () => {
-  gulp.watch('src/index*.html', templates);
-  gulp.watch('src/*.css', css);
+  gulp.watch('src', build);
 };
 
 // css dependency is needed for amp (import css output)
