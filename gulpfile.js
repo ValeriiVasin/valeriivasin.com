@@ -37,7 +37,7 @@ const ampValidate = () =>
     .pipe(gulpAmpValidator.failAfterError());
 
 const watch = () => {
-  gulp.watch('src/index.html', html);
+  gulp.watch('src/index*.html', templates);
   gulp.watch('src/*.css', css);
 };
 
