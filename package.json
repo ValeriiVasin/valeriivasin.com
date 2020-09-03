@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "Homepage",
   "scripts": {
-    "start": "serve public",
-    "build": "gulp build",
-    "dev": "gulp dev"
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --out-dir public"
   },
   "repository": {
     "type": "git",
@@ -16,12 +15,6 @@
   "homepage": "https://github.com/ValeriiVasin/valeriivasin.com",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-amphtml-validator": "^1.0.4",
-    "gulp-concat": "^2.6.0",
-    "gulp-file-include": "^2.1.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-minify-css": "^1.2.1",
-    "serve": "^11.3.0"
+    "parcel-bundler": "^1.12.4"
   }
 }
