@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Homepage",
   "scripts": {
-    "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --out-dir public"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir public"
   },
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
   "author": "Valerii Vasin",
   "license": "ISC",
   "homepage": "https://github.com/ValeriiVasin/valeriivasin.com",
-  "dependencies": {},
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {}
 }
