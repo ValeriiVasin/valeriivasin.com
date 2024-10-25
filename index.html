@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,49 +9,47 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1"
     />
-    <link rel="stylesheet" href="app.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
   </head>
   <body>
-    <div class="main">
-      <h1 class="name">Valerii Vasin</h1>
-      <div class="about">Frontend developer. TypeScript lover.</div>
-      <ul class="links">
-        <li class="links__item">
+    <main
+      class="flex h-screen flex-col items-center justify-center gap-4 bg-gray-100"
+    >
+      <h1 class="text-6xl capitalize">Valerii Vasin</h1>
+      <h2 class="text-lg font-light text-gray-900">
+        Frontend developer. TypeScript lover.
+      </h2>
+      <ul class="flex gap-4">
+        <li>
           <a
-            class="links__link"
+            class="text-green-600 hover:underline"
             target="_blank"
             rel="noopener"
             href="https://twitter.com/ValeriiVasin"
             >Twitter</a
           >
         </li>
-        <li class="links__item">
+
+        <li>
           <a
-            class="links__link"
+            class="text-green-600 hover:underline"
             target="_blank"
             rel="noopener"
             href="https://github.com/ValeriiVasin"
             >Github</a
           >
         </li>
-        <li class="links__item">
+        <li>
           <a
-            class="links__link"
+            class="text-green-600 hover:underline"
             target="_blank"
             rel="noopener"
             href="https://linkedin.com/in/ValeriiVasin"
             >LinkedIn</a
           >
         </li>
-        <li class="links__item">
-          <a
-            class="links__link"
-            href="mailto:&#x76;&#x61;&#x6c;&#x65;&#x72;&#x69;&#x69;&#x2e;&#x76;&#x61;&#x73;&#x69;&#x6e;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
-            >Email</a
-          >
-        </li>
       </ul>
-    </div>
+    </main>
   </body>
 </html>
