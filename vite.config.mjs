@@ -1,42 +1,39 @@
-import { defineConfig } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
-import { viteSingleFile } from "vite-plugin-singlefile";
+import { defineConfig } from 'vite';
+import { createHtmlPlugin } from 'vite-plugin-html';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
 const inlineFavicon = () => ({
-  name: "inline-favicon",
-  apply: "build",
-  enforce: "post",
+  name: 'inline-favicon',
+  apply: 'build',
+  enforce: 'post',
   generateBundle(_, bundle) {
     const assets = new Map();
 
     for (const asset of Object.values(bundle)) {
-      if (asset.type === "asset") {
+      if (asset.type === 'asset') {
         assets.set(asset.fileName, asset);
       }
     }
 
     const toDataUrl = (filename, source) => {
       const lower = filename.toLowerCase();
-      const mime =
-        lower.endsWith(".ico")
-          ? "image/x-icon"
-          : lower.endsWith(".png")
-            ? "image/png"
-            : lower.endsWith(".svg")
-              ? "image/svg+xml"
-              : null;
+      const mime = lower.endsWith('.ico')
+        ? 'image/x-icon'
+        : lower.endsWith('.png')
+          ? 'image/png'
+          : lower.endsWith('.svg')
+            ? 'image/svg+xml'
+            : null;
 
       if (!mime) return null;
 
-      const buffer = Buffer.isBuffer(source)
-        ? source
-        : Buffer.from(source);
+      const buffer = Buffer.isBuffer(source) ? source : Buffer.from(source);
 
-      return `data:${mime};base64,${buffer.toString("base64")}`;
+      return `data:${mime};base64,${buffer.toString('base64')}`;
     };
 
     for (const asset of Object.values(bundle)) {
-      if (asset.type !== "asset" || !asset.fileName.endsWith(".html")) {
+      if (asset.type !== 'asset' || !asset.fileName.endsWith('.html')) {
         continue;
       }
 
@@ -52,9 +49,7 @@ const inlineFavicon = () => ({
           const href = hrefMatch[1];
           if (/^(data:|https?:)?\/\//i.test(href)) return tag;
 
-          const cleanHref = href
-            .split(/[?#]/)[0]
-            .replace(/^\.?\//, "");
+          const cleanHref = href.split(/[?#]/)[0].replace(/^\.?\//, '');
           const faviconAsset = assets.get(cleanHref);
 
           if (!faviconAsset) return tag;
@@ -67,7 +62,7 @@ const inlineFavicon = () => ({
           assets.delete(cleanHref);
 
           return tag.replace(hrefMatch[0], `href="${dataUrl}"`);
-        }
+        },
       );
 
       if (didInline) {
