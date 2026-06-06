@@ -1,0 +1,14 @@
+# Valerii Vasin
+
+> Personal website of Valerii Vasin, a frontend developer focused on TypeScript, product interfaces, and AI-related work.
+
+This site is a minimal personal homepage. It identifies who Valerii Vasin is and provides the main public links for profile, code, professional background, and contact.
+
+Use this file as the primary machine-readable summary of the site.
+
+## Links
+
+- [Website](https://valerii.dev/): Main personal site.
+- [GitHub](https://github.com/ValeriiVasin): Public code, repositories, and development activity.
+- [LinkedIn](https://linkedin.com/in/ValeriiVasin): Professional profile and work history.
+- [Contact](mailto:hello@valerii.dev): Direct email contact.
