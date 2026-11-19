@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/anel",
+      "destination": "https://anel.valerii.dev/",
+      "permanent": false
+    },
+    {
+      "source": "/anel/",
+      "destination": "https://anel.valerii.dev/",
+      "permanent": false
+    }
+  ]
+}
